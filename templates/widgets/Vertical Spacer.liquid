@@ -1,0 +1,18 @@
+{% dropdown-Spacer_Height { 
+    "10px":"10px",
+    "20px":"20px",
+    "30px":"30px",
+    "40px":"40px",
+    "50px":"50px",
+    "100px":"100px",
+    "200px":"200px"
+    } %}
+    
+{% dropdown-Show_Horizontal_Rule {
+    "No":"false",
+    "Yes":"true"
+} %}
+<div class="col-xs-12" style="height:{{dropdown-Spacer_Height}};">
+    {% if dropdown-Show_Horizontal_Rule == "true" %}<hr>{% endif %}
+</div>
+<div class="foo"></div>

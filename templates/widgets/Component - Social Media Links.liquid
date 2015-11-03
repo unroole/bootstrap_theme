@@ -1,0 +1,30 @@
+{% dropdown-Icon_Size {"1x" : "", "33%" : "fa-lg", "2x" : "fa-2x", "3x": "fa-3x", "4x" : "fa-4x", "5x" : "fa-5x"} %}
+<p>
+    {% if simple_string-Facebook_URL != "" %}
+        <a href="{{simple_string-Facebook_URL}}" title="Facebook" target="_blank"><i class="fa fa-facebook {{dropdown-Icon_Size}} fa-fw"></i></a>
+    {% endif %}
+    {% if simple_string-Twitter_URL != "" %}
+        <a href="{{simple_string-Twitter_URL}}" title="twitter" target="_blank"><i class="fa fa-twitter {{dropdown-Icon_Size}} fa-fw"></i></a>
+    {% endif %}
+    {% if simple_string-Linkedin_URL != "" %}
+        <a href="{{simple_string-Linkedin_URL}}" title="Linkedin" target="_blank"><i class="fa fa-linkedin {{dropdown-Icon_Size}} fa-fw"></i></a>
+    {% endif %}
+     {% if simple_string-Pinterest_URL != "" %}
+        <a href="{{simple_string-Pinterest_URL}}" title="Pinterest" target="_blank"><i class="fa fa-pinterest {{dropdown-Icon_Size}} fa-fw"></i></a>
+    {% endif %}
+    {% if simple_string-Behance_URL != "" %}
+        <a href="{{simple_string-Behance_URL}}" title="Behance" target="_blank"><i class="fa fa-behance {{dropdown-Icon_Size}} fa-fw"></i></a>
+    {% endif %}
+    {% if simple_string-Dribble_URL != "" %}
+        <a href="{{simple_string-Dribble_URL}}" title="Dribble" target="_blank"><i class="fa fa-dribbble {{dropdown-Icon_Size}} fa-fw"></i></a>
+    {% endif %}
+    {% if simple_string-Github_URL != "" %}
+        <a href="{{simple_string-Github_URL}}" title="Github" target="_blank"><i class="fa fa-github {{dropdown-Icon_Size}} fa-fw"></i></a>
+    {% endif %}
+    {% if simple_string-Website_URL != "" %}
+        <a href="{{simple_string-Website_URL}}" title="Homepage" target="_blank"><i class="fa fa-globe {{dropdown-Icon_Size}} fa-fw"></i></a>
+    {% endif %}
+    {% if simple_string-Email != "" %}
+        <a href="mailto:{{simple_string-Email}}" title="Email" target="_blank"><i class="fa fa-envelope {{dropdown-Icon_Size}} fa-fw"></i></a>
+    {% endif %}
+</p>

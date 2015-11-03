@@ -1,0 +1,88 @@
+{% dropdown-Show_Author {
+    "yes" : "yes",
+    "no": "no" 
+} %}
+
+{% dropdown-Show_Featured_Image {
+    "yes" : "yes",
+    "no": "no" 
+} %}
+
+{% dropdown-Show_Category {
+    "yes" : "yes",
+    "no": "no" 
+} %}
+
+{% dropdown-Published_Date {
+    "Do Not Show" : "0",
+    "Apr 22, 2014": "1",
+    "Tue Apr 22 11:16:09 2014": "2",
+    "2014-04-22" : "3"
+} %}
+
+{% dropdown-Width {
+    "Full" : "container-fluid", 
+    "Fixed" : "container"
+} %}
+{% dropdown-Show_Related_Articles {
+    "yes" : "yes",
+    "no": "no" 
+} %}
+{% case dropdown-Published_Date %}
+    {% when '1' %}
+        {% capture myDate %}{{article.published_on | date: "%b %d, %Y"}}{% endcapture %}
+    {% when '2' %}
+       {% capture myDate %}{{article.published_on | date: "%c"}}{% endcapture %}
+    {% when '3' %}
+       {% capture myDate %}{{article.published_on | date: "%F"}}{% endcapture %}   
+{% endcase %}
+
+<article  class="{{dropdown-Width}} {{html_attributes.classes}}" id="{{html_attributes.id}}"  {{html_attributes.attributes}}>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>{{article.title}}{% if dropdown-Show_Category == "yes" %}<small> in {{article.category.name}}</small>{% endif %}</h1>
+            <h2>
+                {% if dropdown-Show_Author == "yes" %}<small>By {{article.author.first_name}} {{article.author.last_name}}</small>{% endif %}
+                {% if dropdown-Show_Author == "yes" and dropdown-Published_Date != "0" %}<small> - </small>{% endif %}
+                {% if dropdown-Published_Date != "0" %}<small>{{myDate}}</small>{% endif %}
+            </h2>
+            {% if article.featured_image and dropdown-Show_Featured_Image == "yes" %}
+                <img src="{{article.featured_image.sizes.original.url}}" class="img-responsive" alt="{{article.featured_image.name}}"/>
+            {% endif %}
+            <div class="col-xs-12" style="height:10px"></div>
+            <div class="body">{{article.body}}</div>
+            <div class="col-xs-12" style="height:10px"></div>
+        </div>
+    </div><!--end .row -->
+    {% if dropdown-Show_Related_Articles == "yes" %}
+        <div class="row">
+            <div class="col-xs-12"><h3>Related articles</h3></div>
+        </div>
+        <div class="row">
+            {% for related in article_collection.items %}
+                {% if related.category.id == article.category.id %}
+                    {% capture cat_var %}{% increment count_cat %}{% endcapture %}
+                    {% if cat_var == '4' %}
+                        {% break %}
+                    {% else %}
+                        <div class="col-xs-12 col-md-3">
+                            <div class="thumbnail">
+
+                                <a href="{{related.link}}" title="{{related.title}}"><img src="{{related.featured_image.sizes.s.url}}" alt="{{related.title}}" class="img-responsive" /></a>
+
+                                <div class="caption">
+                                    <a href="{{related.link}}" title="{{related.title}}"><h3>{{related.title}}</h3></a>
+                                    {{related.body | truncatewords: 30 }}
+                                    <a href="{{related.link}}" class="pull-right">Read more</a>
+                                    <div class="clearfix"></div>
+                                </div><!-- end.caption -->
+                            </div><!-- end.thumbnail -->
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div><!-- end.row -->
+    {% endif %}
+</article>
+
+

@@ -1,0 +1,22 @@
+{% dropdown-Content_Position {
+    "Center" : "text-center",
+    "Left" : "text-left",
+    "Right" : "text-right"
+    }
+    %}
+    
+{% dropdown-Show_Quotation_Marks {
+    "Yes" : "true",
+    "No" : ""
+    }
+    %}
+
+<section class="jumbotron" >
+    <div class="container {{dropdown-Content_Position}}">
+        <div class="col-xs-12">
+            {% if simple_string-Quote_Caption != "" %}<h1>{% if dropdown-Show_Quotation_Marks == "true" %}&#8220; {% endif %}<em><small>{{simple_string-Quote_Caption}}</small></em>{% if dropdown-Show_Quotation_Marks == "true" %} &#8221;{% endif %}</h1>{% endif %}
+            {% if simple_string-Author != "" %}<h4>- {{simple_string-Author}}</h4>{% endif %}
+            {{structured}}
+        </div>
+    </div>
+</section>

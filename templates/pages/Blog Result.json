@@ -1,0 +1,317 @@
+{
+  "page": {
+    "title": "Blog Result",
+    "description": "",
+    "tags": [
+
+    ],
+    "keywords": [
+
+    ],
+    "permanent-link": "blog-result",
+    "structure": {
+      "un-page": {
+        "name": "Page",
+        "alias": null,
+        "features": {
+          "html_attributes": {
+            "type": "html_attributes",
+            "options": {
+              "tag_id": null,
+              "tag_classes": null,
+              "tag_attributes": null
+            }
+          },
+          "structured": {
+            "type": "structured",
+            "options": {
+            }
+          }
+        },
+        "children": [
+          {
+            "component _ section": {
+              "name": "Component - Section",
+              "alias": null,
+              "features": {
+                "dropdown-Tag": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "section"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container-fluid"
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "component _ column": {
+                    "name": "Component - Column",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Grid_Colums_on_Devices_Above_1200px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-lg-1"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Above_992px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-1"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Above_768px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-sm-1"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Below_768px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-xs-1"
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": null,
+                          "tag_classes": null,
+                          "tag_attributes": null
+                        }
+                      },
+                      "structured": {
+                        "type": "structured",
+                        "options": {
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "vertical spacer": {
+                          "name": "Vertical Spacer",
+                          "alias": null,
+                          "features": {
+                            "dropdown-Spacer_Height": {
+                              "type": "dropdown",
+                              "options": {
+                                "options": "50px"
+                              }
+                            },
+                            "dropdown-Show_Horizontal_Rule": {
+                              "type": "dropdown",
+                              "options": {
+                                "options": "false"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "article result": {
+              "name": "Article Result",
+              "alias": null,
+              "features": {
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container"
+                  }
+                },
+                "dropdown-Show_Author": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "yes"
+                  }
+                },
+                "dropdown-Show_Featured_Image": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "yes"
+                  }
+                },
+                "dropdown-Show_Category": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "yes"
+                  }
+                },
+                "dropdown-Published_Date": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "1"
+                  }
+                },
+                "dropdown-Show_Related_Articles": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "yes"
+                  }
+                },
+                "article_result": {
+                  "type": "article_result",
+                  "options": {
+                    "categories": [
+
+                    ],
+                    "types": [
+
+                    ]
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "article_collection": {
+                  "type": "article_collection",
+                  "options": {
+                    "categories": [
+
+                    ],
+                    "types": [
+
+                    ],
+                    "per_page": "25",
+                    "results_page_id": "",
+                    "filter_articles_by_tags": ""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "component _ section": {
+              "name": "Component - Section",
+              "alias": null,
+              "features": {
+                "dropdown-Tag": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "section"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container-fluid"
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "component _ column": {
+                    "name": "Component - Column",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Grid_Colums_on_Devices_Above_1200px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-lg-1"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Above_992px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-1"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Above_768px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-sm-1"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Below_768px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-xs-1"
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": null,
+                          "tag_classes": null,
+                          "tag_attributes": null
+                        }
+                      },
+                      "structured": {
+                        "type": "structured",
+                        "options": {
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "vertical spacer": {
+                          "name": "Vertical Spacer",
+                          "alias": null,
+                          "features": {
+                            "dropdown-Spacer_Height": {
+                              "type": "dropdown",
+                              "options": {
+                                "options": "50px"
+                              }
+                            },
+                            "dropdown-Show_Horizontal_Rule": {
+                              "type": "dropdown",
+                              "options": {
+                                "options": "false"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{% dropdown-Input_Type {
+    "text" : "text", 
+    "checkbox" : "checkbox", 
+    "radio" : "radio",
+    "textarea" : "textarea",
+    "password" : "password", 
+    "number" : "number", 
+    "email" : "email", 
+    "url" : "url", 
+    "datetime" : "datetime", 
+    "datetime-local" : "datetime-local", 
+    "date" : "date", 
+    "month" : "month", 
+    "time" : "time", 
+    "week" : "week", 
+    "search" : "search", 
+    "tel" : "tel", 
+    "color" : "color"} 
+    %}
+{% dropdown-Show_Label {
+        "yes" : "yes",
+        "no" : "no"
+    } %}
+{% dropdown-Inline_radio_or_checkbox {
+        "yes" : "yes",
+        "no" : "no"
+    } %}
+    
+{% dropdown-Input_Size {
+    "default" : "",
+    "large" : "input-group-lg",
+    "small" : "input-group-sm"
+    } %}
+<div class="form-group {{html_attributes.classes}}" id="{{html_attributes.id}}" {{html_attributes.attributes}}>
+{% if dropdown-Input_Type == "textarea" %}
+    <label>{{simple_string-Label_Text}}</label>
+    <textarea class="form-control {{simple_string-Input_Classes}}" id="{{simple_string-Input_id}}" rows="{{simple_number-Textarea_Rows}}"></textarea>
+{% elsif dropdown-Input_Type == "checkbox" or dropdown-Input_Type == "radio" %}
+<div class="{{dropdown-Input_Type}}{% if dropdown-Inline_radio_or_checkbox == 'yes'%}-inline{% endif %}" >
+    {% if simple_string-Label_Text != '' %}
+        <label>
+    {% endif %}
+    <input type="{{dropdown-Input_Type}}" {% if dropdown-Input_Type == "radio" %} name="{{simple_string-Radio_Group_Name}}" {% endif %} id="{{simple_string-Input_id}}" class="{{simple_string-Input_Classes}}" value="{{simple_string-Checkbox_Radio_value}}">
+     {% if simple_string-Label_Text != '' %}
+         {{simple_string-Label_Text}}
+        </label>
+   {% endif %}
+</div>
+{% else %}
+    <label for="{{simple_string-Input_Name}}" class="{% if dropdown-Show_Label == 'no' %}sr-only{% endif %}">{{simple_string-Label_Text}}</label>
+    <input type="{{dropdown-Input_Type}}" id="{{simple_string-Input_id}}" class="form-control {{simple_string-Input_Classes}}" placeholder="{{simple_string-Input_Placeholder}}">
+{% endif %}
+</div><!-- end.form-group -->

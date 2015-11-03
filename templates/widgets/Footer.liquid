@@ -1,0 +1,89 @@
+{% dropdown-Navbar_Color {
+    "default" : "navbar-default",
+    "inverted" : "navbar-inverse"
+} %}
+{% dropdown-Container_Width {
+    "fixed" : "",
+    "fluid" : "-fluid"
+    } %}
+{% dropdown-Navbar_Position {
+    "default" : "",
+    "fixed to top" : "navbar-fixed-top",
+    "fixed to bottom" : "navbar-fixed-bottom"
+    } %}
+{% dropdown-Navigation_Links_Float {
+    "left" : "navbar-left",
+    "right" : "navbar-right"
+} %}
+{% dropdown-Icon_Size {
+    "1x" : "", 
+    "33%" : "fa-lg", 
+    "2x" : "fa-2x", 
+    "3x": "fa-3x", 
+    "4x" : "fa-4x", 
+    "5x" : "fa-5x"
+} %}
+
+<footer class="footer {{dropdown-Navbar_Color}} {{dropdown-Navbar_Position}} {{html_attributes.classes}}" id="{{html_attributes.id}}" {{html_attributes.attributes}}>
+    <div class="container{{dropdown-Container_Width}}">
+        <div id="un-footer-navigation" class="text-center">
+            <ul class="nav navbar-nav {{dropdown-Navigation_Links_Float}}">
+            {% for level_1 in navigation.items %}
+                <li> 
+                    <a href="{{level_1.url}}">{{level_1.label}}</a>
+                </li>
+            {% endfor %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if simple_string-Facebook_URL != "" %}       
+                    <li>
+                        <a href="{{simple_string-Facebook_URL}}" title="Facebook" target="_blank"><i class="fa fa-facebook {{dropdown-Icon_Size}} fa-fw"></i></a>
+                    </li>
+                {% endif %}
+                {% if simple_string-Twitter_URL != "" %}    
+                    <li>
+                        <a href="{{simple_string-Twitter_URL}}" title="twitter" target="_blank"><i class="fa fa-twitter {{dropdown-Icon_Size}} fa-fw"></i></a>
+                    </li>
+                {% endif %}
+                {% if simple_string-Linkedin_URL != "" %}    
+                    <li>
+                        <a href="{{simple_string-Linkedin_URL}}" title="Linkedin" target="_blank"><i class="fa fa-linkedin {{dropdown-Icon_Size}} fa-fw"></i></a>
+                    </li>
+                {% endif %}
+                 {% if simple_string-Pinterest_URL != "" %}    
+                    <li>
+                        <a href="{{simple_string-Pinterest_URL}}" title="Pinterest" target="_blank"><i class="fa fa-pinterest {{dropdown-Icon_Size}} fa-fw"></i></a>
+                    </li>
+                {% endif %}
+                {% if simple_string-Behance_URL != "" %}    
+                    <li>
+                        <a href="{{simple_string-Behance_URL}}" title="Behance" target="_blank"><i class="fa fa-behance {{dropdown-Icon_Size}} fa-fw"></i></a>
+                    </li>
+                {% endif %}
+                {% if simple_string-Dribble_URL != "" %}    
+                    <li>
+                        <a href="{{simple_string-Dribble_URL}}" title="Dribble" target="_blank"><i class="fa fa-dribbble {{dropdown-Icon_Size}} fa-fw"></i></a>
+                    </li>
+                {% endif %}
+                {% if simple_string-Github_URL != "" %}    
+                    <li>
+                        <a href="{{simple_string-Github_URL}}" title="Github" target="_blank"><i class="fa fa-github {{dropdown-Icon_Size}} fa-fw"></i></a>
+                    </li>
+                {% endif %}
+                {% if simple_string-Website_URL != "" %}    
+                    <li>
+                        <a href="{{simple_string-Website_URL}}" title="Homepage" target="_blank"><i class="fa fa-globe {{dropdown-Icon_Size}} fa-fw"></i></a>
+                    </li>
+                {% endif %}
+                {% if simple_string-Email != "" %}    
+                    <li>
+                        <a href="mailto:{{simple_string-Email}}" title="Email" target="_blank"><i class="fa fa-envelope {{dropdown-Icon_Size}} fa-fw"></i></a>
+                    </li>
+                {% endif %}
+                <li class="navbar-text"> 
+                    <span class="text-muted">{{simple_string-Copyright_Text}}</span>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</footer>

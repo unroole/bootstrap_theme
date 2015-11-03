@@ -1,0 +1,40 @@
+{% dropdown-Image_Shape {
+        "default" : "",
+        "rounded" : "img-rounded",
+        "circle" : "img-circle",
+        "thumbnail" : "img-thumbnail"
+    } %}
+    
+{% dropdown-Is_A_Link {
+        "no" : "false",
+        "yes" : "true"
+    } %}
+
+{% if simple_string-Link_Override_URL.content != blank %}
+    {% assign myurl = simple_string-Link_Override_URL %}
+{% else %}
+    {% assign myurl = page_link-Link_To_Page %}
+{% endif %}
+
+
+{% if dropdown-Is_A_Link == "true" %}
+    <a href="{{myurl}}" target="_self" class="{{simple_string-Link_Classes}}">
+{% endif %}
+    <img id="{{html_attributes.id}}" class="img-responsive {{dropdown-Image_Shape}} {{html_attributes.classes}}"  {{html_attributes.attributes}} 
+         srcset="{{asset_image-Image.sizes.original.url}} 3000w,
+        	        {{asset_image-Image.sizes.xxl.url}} 1920w, 
+        	        {{asset_image-Image.sizes.xl.url}} 1440w,
+        	        {{asset_image-Image.sizes.l.url}} 1024w,
+        	        {{asset_image-Image.sizes.m.url}} 768w,
+        	        {{asset_image-Image.sizes.s.url}} 640w,
+        	        {{asset_image-Image.sizes.xs.url}} 480w,
+        	        {{asset_image-Image.sizes.xxs.url}} 320w,
+        	        {{asset_image-Image.sizes.thumb.url}} 200w"
+            	sizes="25vw"
+            	src="{{asset_image-Image.sizes.xl.url}}"
+            	
+            	alt="{{asset_image-Image.description}}"
+    />
+{% if dropdown-Is_A_Link == "true" %}
+    </a>
+{% endif %}

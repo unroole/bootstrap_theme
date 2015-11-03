@@ -1,0 +1,87 @@
+{% dropdown-Show_Metadata {
+    "yes" : "yes",
+    "no": "no" 
+} %}
+
+{% dropdown-Show_Featured_Image {
+    "yes" : "yes",
+    "no": "no" 
+} %}
+
+{% dropdown-Pagination {
+    "None" : "none",
+    "Simple": "simple",
+    "Numbered": "numbered"
+} %}
+
+{% dropdown-Width {
+    "Full" : "container-fluid", 
+    "Fixed" : "container"
+} %}
+
+{% capture length %}
+    {% if simple_number-Truncation_Length_In_Chars %}
+        300
+    {% else %}
+        {{simple_number-Truncation_Length_In_Chars}} 
+    {% endif %}
+{% endcapture %}
+
+<section class="{{dropdown-Width}}  {{html_attributes.classes}}" id="{{html_attributes.id}}"  {{html_attributes.attributes}}>
+{% for a in event_collection.items %}
+    <div class="row">
+        <span  class="col-xs-12"><hr></span>
+    </div>
+    <div class="row">
+        <article class="col-xs-12">
+            <div class="row">
+            {% if dropdown-Show_Featured_Image == "yes" %}
+                
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+                        {% if a.featured_image %}<a href="{{a.link}}" title="{{a.title}}"><img class="img-responsive" src="{{a.featured_image.sizes.xs.url}}" alt="{{a.featured_image.name}}"/></a>{% endif %}
+                     </div>
+                
+            {% endif %}
+                <div class="{% if dropdown-Show_Featured_Image == "yes" %}col-xs-12 col-sm-12 col-md-8 col-lg-9{% else %}col-lg-12 col-md-12 col-sm-12 col-xs-12{% endif %}">
+                    <h3><a href="{{a.link}}" title="{{a.title}}">{{a.title}}</a>{% if dropdown-Show_Metadata == "yes" %}<br><small>From {{a.times[0].start | date: "%b %d, %Y"}} to {{a.times[0].end | date: "%b %d, %Y"}}, at {{a.location.name}}</small>{% endif %}</h3>
+                    {{a.body | truncate_html: length}}
+                    {% if a.link %}
+                        <a href="{{a.link}}">Read More</a>
+                    {% endif %}
+                </div>
+            </div>
+        </article>
+    </div>
+{% endfor %}
+{% if dropdown-Pagination == "numbered" %}
+    <span  class="col-xs-12"><hr></span>
+    <nav class="col-xs-12">
+      <ul class="pagination {{dropdown-Pagination}}">
+        
+            <li {% if event_collection.paginate.previous %}{% else %}class="disabled"{% endif %}>
+              <a href="{{event_collection.paginate.previous_url}}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+        
+        {% for i in (1..event_collection.paginate.total_pages) %}
+        <li {% if i == event_collection.paginate.current %}class="active"{% endif %}><a href="?page={{i}}">{{i}}</a></li>
+        {% endfor %}
+        
+        <li {% if event_collection.paginate.next %}{% else %}class="disabled"{% endif %}>
+          <a href="{{event_collection.paginate.next_url}}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+{% elsif dropdown-Pagination == "simple" %}
+    <span  class="col-xs-12"><hr></span>
+    <nav>
+      <ul class="pager">
+        <li {% if event_collection.paginate.previous %}{% else %}class="disabled"{% endif %}><a href="{{event_collection.paginate.previous_url}}">Previous</a></li>
+        <li {% if event_collection.paginate.next %}{% else %}class="disabled"{% endif %}><a href="{{event_collection.paginate.next_url}}">Next</a></li>
+      </ul>
+    </nav>
+{% endif %}
+</section>

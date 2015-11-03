@@ -1,0 +1,62 @@
+{% dropdown-Width {
+    "Full" : "container-fluid", "Fixed" : "container"
+    } %}
+{% dropdown-Display_Caption {
+    "yes" : "yes",
+    "no" : "no"
+} %}
+{% dropdown-Loop {
+    "yes" : "yes",
+    "no" : "no"
+} %}
+{% dropdown-Keyboard {
+    "yes" : "yes",
+    "no" : "no"
+} %}
+<section class="{{dropdown-Width}}">
+    <div class="row">
+        <div id="{{simple_string-HTML_Identification}}" class="carousel slide" data-ride="carousel" data-interval="{{simple_number-Interval_in_ms}}" data-wrap="{% if dropdown-Loop == 'yes' %}true{% else %}false{% endif %}" data-keyboard="{% if dropdown-Keyboard == 'yes' %}true{% else %}false{% endif %}">
+            <ol class="carousel-indicators">
+                    {% for i in gallery.items %}
+                        <li data-target="#{{simple_string-HTML_Identification}}" data-slide-to="{{forloop.index0}}" {% if forloop.first == true %}class="active"{% endif %}></li>
+                    {% endfor %}
+            </ol>
+            
+            <div class="carousel-inner">
+        	    {% for i in gallery.items %}
+                    {% if i.asset.type == "image" %}
+                        <div class="item{% if forloop.first == true %} active{% endif %}">
+                           <img class="img-responsive"
+                             srcset="{{i.sizes.original.url}} 3000w,
+                            	        {{i.sizes.xxl.url}} 1920w, 
+                            	        {{i.sizes.xl.url}} 1440w,
+                            	        {{i.sizes.l.url}} 1024w,
+                            	        {{i.sizes.m.url}} 768w,
+                            	        {{i.sizes.s.url}} 640w,
+                            	        {{i.sizes.xs.url}} 480w,
+                            	        {{i.sizes.xxs.url}} 320w,
+                            	        {{i.sizes.thumb.url}} 200w"
+                            	    sizes="100vw"
+                                	src="{{i.sizes.xl.url}}"
+                                	
+                                	alt="{{i.name}}"
+                            />
+                            {% if dropdown-Display_Caption == "yes" %}
+                                <div class="carousel-caption">
+                                    <h3>{{i.description}}</h3>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+         
+            <a class="left carousel-control" href="#{{simple_string-HTML_Identification}}" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#{{simple_string-HTML_Identification}}" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+</section>

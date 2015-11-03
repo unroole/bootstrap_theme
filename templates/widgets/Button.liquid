@@ -1,0 +1,41 @@
+{% dropdown-Button_Type {
+    "Default (a)" : "a",
+    "button" : "button",
+    "input" : "input"
+    } %}
+
+{% dropdown-Color {
+    "default" : "btn-default",
+    "primary" : "btn-primary",
+    "success" : "btn-success",
+    "info" : "btn-info",
+    "warning" : "btn-warning",
+    "danger" : "btn-danger",
+    "link" : "btn-link"
+    }
+    %}
+{% dropdown-Size {
+    "default" : "",
+    "large" : "btn-lg",
+    "small" : "btn-sm",
+    "extra small" : "btn-xs"
+    } %}
+{% dropdown-Button_Width {
+    "auto" : "",
+    "full" : "btn-block"
+    }%}
+{% dropdown-Disable {
+    "no" : "no",
+    "yes" : "yes"
+    }%}
+    
+{% if simple_string-Link_Override_URL.content != blank %}
+    {% assign myurl = simple_string-Link_Override_URL %}
+{% else %}
+    {% assign myurl = page_link-Link_To_Page %}
+{% endif %}
+
+    
+<{{dropdown-Button_Type}} href="{{myurl}}" {% if dropdown-Disable == "yes" %} disabled {% endif %} {% if dropdown-Button_Type == "input" %} type="submit" {% endif %} class="btn {{dropdown-Color}} {{dropdown-Size}} {{dropdown-Button_Width}} {{html_attributes.classes}}" id="{{html_attributes.id}}" {{html_attributes.attributes}}>
+    {{simple_string-Button_Label}} {{structured}}
+</{{dropdown-Button_Type}}>

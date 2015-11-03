@@ -1,0 +1,1365 @@
+{
+  "page": {
+    "title": "Home",
+    "description": "",
+    "tags": [
+
+    ],
+    "keywords": [
+
+    ],
+    "permanent-link": "home",
+    "structure": {
+      "un-page": {
+        "name": "Page",
+        "alias": null,
+        "features": {
+          "html_attributes": {
+            "type": "html_attributes",
+            "options": {
+              "tag_id": null,
+              "tag_classes": null,
+              "tag_attributes": null
+            }
+          },
+          "structured": {
+            "type": "structured",
+            "options": {
+            }
+          }
+        },
+        "children": [
+          {
+            "component _ section": {
+              "name": "Component - Section",
+              "alias": null,
+              "features": {
+                "dropdown-Tag": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "section"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container"
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "vertical spacer": {
+                    "name": "Vertical Spacer",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Spacer_Height": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "50px"
+                        }
+                      },
+                      "dropdown-Show_Horizontal_Rule": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "false"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "hero section": {
+              "name": "Hero Section",
+              "alias": null,
+              "features": {
+                "dropdown-Button_Color": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "btn-primary"
+                  }
+                },
+                "dropdown-Content_Position": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "text-center"
+                  }
+                },
+                "dropdown-Text_Color": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": ""
+                  }
+                },
+                "simple_string-Link_Override_URL": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": ""
+                  }
+                },
+                "simple_string-Button_Link_Override_URL": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": ""
+                  }
+                },
+                "page_link-Button_Link_To_Page": {
+                  "type": "page_link",
+                  "options": {
+                    "page": ""
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "asset_image-Choose_a_Background_Image": {
+                  "type": "asset_image",
+                  "options": {
+                    "asset_id": ""
+                  }
+                },
+                "simple_string-Title_Caption": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": "This could be a longer title."
+                  }
+                },
+                "simple_string-Body_Caption": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": "This is a simple hero unit, a simple jumbotron-style component.<br>It is calling extra attention to featured content or information."
+                  }
+                },
+                "simple_string-Button_Label": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "vertical spacer": {
+                    "name": "Vertical Spacer",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Spacer_Height": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "40px"
+                        }
+                      },
+                      "dropdown-Show_Horizontal_Rule": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "false"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "button": {
+                    "name": "Button",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Button_Type": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "a"
+                        }
+                      },
+                      "dropdown-Color": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "btn-danger"
+                        }
+                      },
+                      "dropdown-Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "btn-lg"
+                        }
+                      },
+                      "dropdown-Button_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Disable": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "no"
+                        }
+                      },
+                      "simple_string-Link_Override_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": ""
+                        }
+                      },
+                      "page_link-Link_To_Page": {
+                        "type": "page_link",
+                        "options": {
+                          "page": "832"
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "simple_string-Button_Label": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Kitchen Sink"
+                        }
+                      },
+                      "structured": {
+                        "type": "structured",
+                        "options": {
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component _ section": {
+              "name": "Component - Section",
+              "alias": null,
+              "features": {
+                "dropdown-Tag": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "section"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container"
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "vertical spacer": {
+                    "name": "Vertical Spacer",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Spacer_Height": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "50px"
+                        }
+                      },
+                      "dropdown-Show_Horizontal_Rule": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "false"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component _ section": {
+              "name": "Component - Section",
+              "alias": "services",
+              "features": {
+                "dropdown-Tag": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "section"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container"
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "services item": {
+                    "name": "Services Item",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-3"
+                        }
+                      },
+                      "dropdown-Text_Alignment": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "text-center"
+                        }
+                      },
+                      "dropdown-Icon": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "fa-picture-o"
+                        }
+                      },
+                      "dropdown-Icon_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "fa-3x"
+                        }
+                      },
+                      "dropdown-Icon_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Icon_Animation": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Icon_Rotation": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Display_Read_More_Button": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "yes"
+                        }
+                      },
+                      "dropdown-Button_Color": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "btn-primary"
+                        }
+                      },
+                      "dropdown-Button_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Button_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "simple_string-Link_Override_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": ""
+                        }
+                      },
+                      "page_link-Link_To_Page": {
+                        "type": "page_link",
+                        "options": {
+                          "page": "828"
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "article": {
+                        "type": "article",
+                        "options": {
+                          "article_id": "",
+                          "results_page_id": ""
+                        }
+                      },
+                      "simple_string-Button_Label": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Read more"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "services item": {
+                    "name": "Services Item",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-3"
+                        }
+                      },
+                      "dropdown-Text_Alignment": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "text-center"
+                        }
+                      },
+                      "dropdown-Icon": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "fa-camera"
+                        }
+                      },
+                      "dropdown-Icon_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "fa-3x"
+                        }
+                      },
+                      "dropdown-Icon_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Icon_Animation": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Icon_Rotation": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Display_Read_More_Button": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "yes"
+                        }
+                      },
+                      "dropdown-Button_Color": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "btn-primary"
+                        }
+                      },
+                      "dropdown-Button_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Button_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "simple_string-Link_Override_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": ""
+                        }
+                      },
+                      "page_link-Link_To_Page": {
+                        "type": "page_link",
+                        "options": {
+                          "page": ""
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "article": {
+                        "type": "article",
+                        "options": {
+                          "article_id": "",
+                          "results_page_id": ""
+                        }
+                      },
+                      "simple_string-Button_Label": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Read more"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "services item": {
+                    "name": "Services Item",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-3"
+                        }
+                      },
+                      "dropdown-Text_Alignment": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "text-center"
+                        }
+                      },
+                      "dropdown-Icon": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "fa-rocket"
+                        }
+                      },
+                      "dropdown-Icon_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "fa-3x"
+                        }
+                      },
+                      "dropdown-Icon_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Icon_Animation": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Icon_Rotation": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Display_Read_More_Button": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "yes"
+                        }
+                      },
+                      "dropdown-Button_Color": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "btn-primary"
+                        }
+                      },
+                      "dropdown-Button_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Button_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "simple_string-Link_Override_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": ""
+                        }
+                      },
+                      "page_link-Link_To_Page": {
+                        "type": "page_link",
+                        "options": {
+                          "page": ""
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "article": {
+                        "type": "article",
+                        "options": {
+                          "article_id": "",
+                          "results_page_id": ""
+                        }
+                      },
+                      "simple_string-Button_Label": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Read more"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "services item": {
+                    "name": "Services Item",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-3"
+                        }
+                      },
+                      "dropdown-Text_Alignment": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "text-center"
+                        }
+                      },
+                      "dropdown-Icon": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "fa-code"
+                        }
+                      },
+                      "dropdown-Icon_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "fa-3x"
+                        }
+                      },
+                      "dropdown-Icon_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Icon_Animation": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Icon_Rotation": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Display_Read_More_Button": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "yes"
+                        }
+                      },
+                      "dropdown-Button_Color": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "btn-primary"
+                        }
+                      },
+                      "dropdown-Button_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Button_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "simple_string-Link_Override_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": ""
+                        }
+                      },
+                      "page_link-Link_To_Page": {
+                        "type": "page_link",
+                        "options": {
+                          "page": ""
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "article": {
+                        "type": "article",
+                        "options": {
+                          "article_id": "",
+                          "results_page_id": ""
+                        }
+                      },
+                      "simple_string-Button_Label": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Read more"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "vertical spacer": {
+                    "name": "Vertical Spacer",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Spacer_Height": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "50px"
+                        }
+                      },
+                      "dropdown-Show_Horizontal_Rule": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "false"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "vertical spacer": {
+                    "name": "Vertical Spacer",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Spacer_Height": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "100px"
+                        }
+                      },
+                      "dropdown-Show_Horizontal_Rule": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "true"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component _ section": {
+              "name": "Component - Section",
+              "alias": "pricing",
+              "features": {
+                "dropdown-Tag": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "section"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container"
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "pricing column": {
+                    "name": "pricing column",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-4"
+                        }
+                      },
+                      "dropdown-Featured_plan": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Text_Alignment": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "text-center"
+                        }
+                      },
+                      "dropdown-Button_Color": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "btn-primary"
+                        }
+                      },
+                      "dropdown-Button_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Button_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "simple_string-Link_Override_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "#"
+                        }
+                      },
+                      "page_link-Link_To_Page": {
+                        "type": "page_link",
+                        "options": {
+                          "page": ""
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "simple_string-Plan_Name": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Basic"
+                        }
+                      },
+                      "simple_string-Price": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "$45"
+                        }
+                      },
+                      "simple_string-Unit": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "month"
+                        }
+                      },
+                      "simple_string-Button_Label": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Sign up"
+                        }
+                      },
+                      "text-Features": {
+                        "type": "text",
+                        "options": {
+                          "text": "<p>Lorem ipsum dolor sit amet</p><p>Nulla vel ex quis felis facilisis</p><p>Nam volutpat auctor nisl</p><p>Duis lacinia nisl et venenatis commodo</p>"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "pricing column": {
+                    "name": "pricing column",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-4"
+                        }
+                      },
+                      "dropdown-Featured_plan": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "bg-primary"
+                        }
+                      },
+                      "dropdown-Text_Alignment": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "text-center"
+                        }
+                      },
+                      "dropdown-Button_Color": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "btn-danger"
+                        }
+                      },
+                      "dropdown-Button_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Button_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "simple_string-Link_Override_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "#"
+                        }
+                      },
+                      "page_link-Link_To_Page": {
+                        "type": "page_link",
+                        "options": {
+                          "page": ""
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "simple_string-Plan_Name": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Business"
+                        }
+                      },
+                      "simple_string-Price": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "$150"
+                        }
+                      },
+                      "simple_string-Unit": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "month"
+                        }
+                      },
+                      "simple_string-Button_Label": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Sign up"
+                        }
+                      },
+                      "text-Features": {
+                        "type": "text",
+                        "options": {
+                          "text": "<p>Lorem ipsum dolor sit amet</p><p>Nulla vel ex quis felis facilisis</p><p>Nam volutpat auctor nisl</p><p>Duis lacinia nisl et venenatis commodo</p>"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "pricing column": {
+                    "name": "pricing column",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-4"
+                        }
+                      },
+                      "dropdown-Featured_plan": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Text_Alignment": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "text-center"
+                        }
+                      },
+                      "dropdown-Button_Color": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "btn-primary"
+                        }
+                      },
+                      "dropdown-Button_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Button_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "simple_string-Link_Override_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "#"
+                        }
+                      },
+                      "page_link-Link_To_Page": {
+                        "type": "page_link",
+                        "options": {
+                          "page": ""
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "simple_string-Plan_Name": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Enterprise"
+                        }
+                      },
+                      "simple_string-Price": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "$480"
+                        }
+                      },
+                      "simple_string-Unit": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "month"
+                        }
+                      },
+                      "simple_string-Button_Label": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Sign up"
+                        }
+                      },
+                      "text-Features": {
+                        "type": "text",
+                        "options": {
+                          "text": "<p>Lorem ipsum dolor sit amet</p><p>Nulla vel ex quis felis facilisis</p><p>Nam volutpat auctor nisl</p><p>Duis lacinia nisl et venenatis commodo</p>"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "vertical spacer": {
+                    "name": "Vertical Spacer",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Spacer_Height": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "100px"
+                        }
+                      },
+                      "dropdown-Show_Horizontal_Rule": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "false"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "quote section": {
+              "name": "Quote Section",
+              "alias": null,
+              "features": {
+                "dropdown-Content_Position": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "text-center"
+                  }
+                },
+                "dropdown-Show_Quotation_Marks": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "true"
+                  }
+                },
+                "simple_string-Quote_Caption": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis nisl ac vehicula molestie."
+                  }
+                },
+                "simple_string-Author": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": "Lorem ipsum"
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              }
+            }
+          },
+          {
+            "component _ section": {
+              "name": "Component - Section",
+              "alias": null,
+              "features": {
+                "dropdown-Tag": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "section"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container"
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "vertical spacer": {
+                    "name": "Vertical Spacer",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Spacer_Height": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "50px"
+                        }
+                      },
+                      "dropdown-Show_Horizontal_Rule": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "false"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "gallery": {
+              "name": "Gallery",
+              "alias": null,
+              "features": {
+                "dropdown-Container_Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container"
+                  }
+                },
+                "dropdown-Display_Caption": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "yes"
+                  }
+                },
+                "dropdown-Grid_Colums_on_Devices_Above_1200px": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": ""
+                  }
+                },
+                "dropdown-Grid_Colums_on_Devices_Above_992px": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": ""
+                  }
+                },
+                "dropdown-Grid_Colums_on_Devices_Above_768px": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "col-sm-3"
+                  }
+                },
+                "dropdown-Grid_Colums_on_Devices_Below_768px": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "col-xs-6"
+                  }
+                },
+                "gallery": {
+                  "type": "gallery",
+                  "options": {
+                    "gallery_id": "",
+                    "per_page": "25",
+                    "filter_images_by_tags": ""
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "component _ section": {
+              "name": "Component - Section",
+              "alias": null,
+              "features": {
+                "dropdown-Tag": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "section"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container"
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "vertical spacer": {
+                    "name": "Vertical Spacer",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Spacer_Height": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "100px"
+                        }
+                      },
+                      "dropdown-Show_Horizontal_Rule": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "false"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

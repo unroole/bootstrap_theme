@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- HELP - PROPERTIES.XML
+****************************************
+This file determines the load order of files when this theme is applied to a website.
+File extensions are NOT used, and files should instead be placed in their respective sections.
+To assign where Javascripts from your channel should load, add the following to the <javascripts> section:
+<file>:channel-javascripts</file>
+To assign where CSS from your channel should load, add the following to the <stylesheets> section:
+<file>:channel-stylesheets</file>
+To add a file from a framework to the load order add the following to the appropriate section:
+<file>:frameworks/name-of-framework/path-of-file/file-name-no-extension</file>
+****************************************
+-->
+<theme_package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../properties.xsd">
+	<load_files>
+		<javascripts>
+		    <file>jquery.min</file>
+			<file>:frameworks/bootstrap/bootstrap/js/bootstrap.min</file>
+		    <file>:channel-javascripts</file>
+		</javascripts>
+		<stylesheets>
+		    <file>:frameworks/bootstrap/bootstrap/css/bootstrap.min</file>
+		    <file>:frameworks/Font Awesome 4.4.0/Font Awesome 4.4.0/css/font-awesome.min</file>
+	        <file>:channel-stylesheets</file>
+			<file>Main</file>
+		</stylesheets>
+		<templates>
+			<layouts>
+			<layout>Default</layout>
+		</layouts>
+			<pages>
+			<page>Contact Us</page>
+			<page>Event Result</page>
+			<page>Home</page>
+			<page>Blog</page>
+			<page>Events</page>
+			<page>Team</page>
+			<page>Blog Result</page>
+			<page>Kitchen Sink</page>
+		</pages>
+			<widgets>
+			<widget>Component - Form Wrapper</widget>
+			<widget>Component - Form Field</widget>
+			<widget>Button</widget>
+			<widget>Image</widget>
+			<widget>Navigation</widget>
+			<widget>Glyphicon</widget>
+			<widget>Hero Section</widget>
+			<widget>Quote Section</widget>
+			<widget>Breadcrumbs</widget>
+			<widget>Slideshow</widget>
+			<widget>Component - Column</widget>
+			<widget>Component - Section</widget>
+			<widget>Gallery</widget>
+			<widget>Vertical Spacer</widget>
+			<widget>Article</widget>
+			<widget>Biography</widget>
+			<widget>Font Awesome Icon (v.4.4.0)</widget>
+			<widget>Google Maps API</widget>
+			<widget>Event</widget>
+			<widget>Component - Pricing Column</widget>
+			<widget>Component - Services Item</widget>
+			<widget>HTML Page Header</widget>
+			<widget>HTML Layout Header</widget>
+			<widget>Component - Social Media Links</widget>
+			<widget>Component - Map Marker</widget>
+			<widget>Component - Map Wrapper</widget>
+			<widget>Footer</widget>
+			<widget>Article Collection</widget>
+			<widget>Article Result</widget>
+			<widget>Event Result</widget>
+			<widget>Event Collection</widget>
+			<widget>Lead Text</widget>
+			<widget>Services Item</widget>
+			<widget>pricing column</widget>
+			<widget>Component Column</widget>
+			<widget>Event single</widget>
+			<widget>Maps Wrapper</widget>
+			<widget>Maps Marker</widget>
+			<widget>Form wrapper</widget>
+			<widget>Form Group</widget>
+			<widget>Container</widget>
+			<widget>Body</widget>
+		</widgets>
+		</templates>
+	</load_files>
+</theme_package>

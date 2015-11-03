@@ -1,0 +1,155 @@
+{% dropdown-Width {
+    "Full" : "container-fluid", 
+    "Fixed" : "container"
+} %}
+{% dropdown-Show_Featured_Image {
+    "yes" : "yes",
+    "no": "no" 
+} %}
+
+{% dropdown-Show_Category {
+    "yes" : "yes",
+    "no": "no" 
+} %}
+
+{% dropdown-Date_And_Time_Format {
+    "dd/mm/yy HH:MM am/pm" : "0", 
+    "dd/mm/yy HH:MM" : "1",
+    "mm/dd/yy HH:MM am/pm" : "2", 
+    "mm/dd/yy HH:MM" : "3"
+} %}
+{% case dropdown-Date_And_Time_Format %}
+    {% when '0' %}
+        {% capture start_time %} {{event.times[0].start | date: "%D %I:%M %p" }} {% endcapture %}
+        {% capture end_time %} {{event.times[0].end | date: "%D %I:%M %p" }} {% endcapture %}
+    {% when '1' %}
+        {% capture start_time %} {{event.times[0].start | date: "%D %H:%M" }} {% endcapture %}
+        {% capture end_time %} {{event.times[0].end | date: "%D %H:%M" }} {% endcapture %}
+    {% when '2' %}
+        {% capture start_time %} {{event.times[0].start | date: "%x %I:%M %p" }} {% endcapture %}
+        {% capture end_time %} {{event.times[0].end | date: "%x %I:%M %p" }} {% endcapture %}
+    {% when '3' %}
+       {% capture start_time %} {{event.times[0].start | date: "%x %H:%M" }} {% endcapture %}
+        {% capture end_time %} {{event.times[0].end | date: "%x %H:%M" }} {% endcapture %}   
+{% endcase %}
+{% dropdown-Related_Events {
+    "none" : "none",
+    "By Category" : "category",
+    "By Location" : "location"
+} %}
+{% dropdown-Map_Zoom_Level {
+    "1" : "1",
+    "2" : "2",
+    "3" : "3",
+    "4" : "4",
+    "5" : "5",
+    "6" : "6",
+    "7" : "7",
+    "8" : "8",
+    "9" : "9",
+    "10" : "10",
+    "11" : "11",
+    "12" : "12",
+    "13" : "13",
+    "14" : "14",
+    "15" : "15",
+    "16" : "16",
+    "17" : "17",
+    "18" : "18",
+    "19" : "19",
+    "20" : "20"
+} %}
+
+{% dropdown-Disable_Default_Google_Maps_Controls {
+        "Yes" : "true",
+        "No" : "false"
+} %}
+
+{% dropdown-Map_Zoom_on_scroll {
+    "Yes" : "true",
+    "No" : "false"
+} %}
+<section class="{{dropdown-Width}} {{html_attributes.classes}}" id="{{html_attributes.id}}"  {{html_attributes.attributes}}>
+    <div class="row">
+        <div class="col-xs-12 ">
+            <h1>{{event.title}}{% if dropdown-Show_Category == "yes" %}<small> in {{event.category.name}}</small>{% endif %}</h1>
+            {% if dropdown-Show_Featured_Image == "yes" %}
+                {% if event.featured_image %}
+                    <img src="{{event.featured_image.sizes.original.url}}" class="img-responsive" />
+                {% endif %}
+            {% endif %}
+            <div class="col-xs-12" style="height:10px"></div>
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <p><span class="text-uppercase">Location:</span> <strong>{{event.location.name}}</strong></p>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <p><span class="text-uppercase">Category:</span> <strong>{{event.category.name}}</strong></p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <p><span class="text-uppercase">Start time:</span> <strong>{{start_time }}</strong> | <span class="text-uppercase">End time:</span> <strong>{{end_time}}</strong></p>
+                </div>
+            </div><!-- end.row-->
+            <div class="col-xs-12" style="height:10px"></div>
+            {{event.body}}
+            <div class="col-xs-12" style="height:10px"></div>
+            <div id="map-canvas" style="height: 500px;width: 100%" data-zoom="{{dropdown-Map_Zoom_Level}}" data-default-ui="{{dropdown-Disable_Default_Google_Maps_Controls}}" data-lat="{{event.location.lat}}" data-lng="{{event.location.lng}}" data-name="{{event.location.name}}" data-description="{{event.location.description}}"></div><!-- end#map-canvas-->
+        </div><!-- end.col-xs-12-->
+    </div><!-- end.row-->
+    {% if dropdown-Related_Events != "none" %}
+        <div class="row">
+            {% if dropdown-Related_Events == "category" %}
+                <div class="col-xs-12" ><h3>More events in the same category</h3></div>
+            {% else %}
+                <div class="col-xs-12"><h3>More events at the same location</h3></div>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% for related in event_collection.items %}
+                {% if dropdown-Related_Events == "category" %}
+                    {% if related.category.id == event.category.id %}
+                        {% capture cat_var %}{% increment count_cat %}{% endcapture %}
+                        {% if cat_var == '4' %}
+                            {% break %}
+                        {% else %}
+                            <div class="col-xs-12 col-md-3">
+                                <div class="thumbnail">
+                                    {% if related.featured_image %}
+                                        <a href="{{related.link}}" title="{{related.title}}"><img src="{{related.featured_image.sizes.s.url}}" alt="{{related.title}}" class="img-responsive" /></a>
+                                    {% endif %}    
+                                    <div class="caption">
+                                        <a href="{{related.link}}" title="{{related.title}}"><h3>{{related.title}}</h3></a>
+                                        {{related.body | truncatewords: 30 }}
+                                        <a href="{{related.link}}" class="pull-right">Read more</a>
+                                        <div class="clearfix"></div>
+                                    </div><!-- end.caption -->
+                                </div><!-- end.thumbnail -->
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% elsif dropdown-Related_Events == "location" %}
+                    {% if related.location.id == event.location.id %}
+                        {% capture loc_var %}{% increment count_loc %}{% endcapture %}
+                        {% if loc_var == '4' %}
+                            {% break %}
+                        {% else %}
+                            <div class="col-xs-12 col-md-3">
+                                <div class="thumbnail">
+                                    {% if related.featured_image %}
+                                        <a href="{{related.link}}" title="{{related.title}}"><img src="{{related.featured_image.sizes.s.url}}" alt="{{related.title}}" class="img-responsive" /></a>
+                                    {% endif %}
+                                    <div class="caption">
+                                        <a href="{{related.link}}" title="{{related.title}}"><h3>{{related.title}}</h3></a>
+                                        {{related.body | truncatewords: 30 }}
+                                        <a href="{{related.link}}" class="pull-right">Read more</a>
+                                        <div class="clearfix"></div>
+                                    </div><!-- end.caption -->
+                                </div><!-- end.thumbnail -->
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div><!-- end.row -->
+    {% endif %}
+</section>

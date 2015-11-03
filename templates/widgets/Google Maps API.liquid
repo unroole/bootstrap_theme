@@ -1,0 +1,88 @@
+<script>
+	var single_map;
+	function initMap() {
+	    if (document.contains(document.getElementById('multiple-map-canvas'))) {
+	        //map with multiple markers added trough Map Marker widget
+	        //gather all marker divs
+	        var markers_raw = $('.map-marker');
+	        var markers_data = [];
+	        var multiple_map_wrapper = document.getElementById('multiple-map-canvas');
+	        var map_zoom = $('#multiple-map-canvas').data('zoom');
+            var map_ui = $('#multiple-map-canvas').data('default-ui');
+            var map_scroll = $('#multiple-map-canvas').data('scroll-zoom');
+            
+	        //create array of objects for each marker
+	        for (var i = 0; i < markers_raw.length; i++) {
+	            var marker_obj = {};
+	            marker_obj.lat = $(markers_raw[i]).data('lat');
+	            marker_obj.lng = $(markers_raw[i]).data('lng');
+	            marker_obj.name = $(markers_raw[i]).data('name');
+	            marker_obj.desc = $(markers_raw[i]).data('description');
+	            markers_data.push(marker_obj);
+	        }
+	        
+	        // generate map and center it on the first marker
+	        var multiple_map = new google.maps.Map(multiple_map_wrapper, {
+	            center: {lat: markers_data[0].lat, lng: markers_data[0].lng},
+	            zoom: map_zoom,
+                disableDefaultUI: map_ui,
+                scrollwheel: map_scroll
+	        });
+	        //create markers and add data for each infowindow
+	        var marker = [];
+	        var infowindow = [];
+	        for (var i = 0; i < markers_data.length; i++) {
+	                marker[i] = new google.maps.Marker({
+	                position: {lat: markers_data[i].lat, lng: markers_data[i].lng},
+	                map: multiple_map,
+	                title: markers_data[i].name
+	            })
+	            marker[i].infowindow = new google.maps.InfoWindow({
+	                content: '<h4>' + markers_data[i].name + '</h4>' + '<p>' + markers_data[i].desc + '</p>'
+	            });
+	            google.maps.event.addListener(marker[i], 'click', function(){
+	                this.infowindow.open(multiple_map, this);
+	            })
+	        }
+	    } 
+	    if (document.contains(document.getElementById('map-canvas'))) {
+	        //single marker map
+	        //generating map and marker on a single marker map on events
+	        //gathering the marker information and storing them in variables
+	        var single_map_wrapper = document.getElementById('map-canvas');
+	        var marker_lat = $('#map-canvas').data('lat');
+	        var marker_lng = $('#map-canvas').data('lng');
+	        var marker_name = $('#map-canvas').data('name');
+	        var marker_description = $('#map-canvas').data('description');
+	        var map_zoom = $('#map-canvas').data('zoom');
+	        var map_ui = $('#map-canvas').data('default-ui');
+            var map_scroll = $('#map-canvas').data('scroll-zoom');
+	        //create map
+	        var single_map = new google.maps.Map(single_map_wrapper, {
+	            center: {lat: marker_lat, lng: marker_lng},
+	            zoom: map_zoom,
+                disableDefaultUI: map_ui,
+                scrollwheel: map_scroll
+	        });
+	        
+	        //create marker
+	        var marker = new google.maps.Marker({
+	            position: {lat: marker_lat, lng: marker_lng},
+	            map: single_map,
+	            title: marker_name
+	        });
+	        
+	        //create infowindow
+	        var infowindow = new google.maps.InfoWindow({
+	            content: '<h4>' + marker_name + '</h4>' + '<p>' + marker_description + '</p>'
+	        });
+	        
+	        //display winfowindow on marker click
+	        marker.addListener('click', function() {
+	            infowindow.open(single_map, marker);
+	        });
+	    }
+	}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{simple_string-Google_Maps_API_Key}}&callback=initMap">
+</script>

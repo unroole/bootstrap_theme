@@ -1,0 +1,13 @@
+<head>
+	<title>{{ page_metadata.name }}</title>
+
+	{% if page_metadata.description %}
+		<meta name="description" content="{{page_metadata.description}}" />
+	{% endif %}
+
+	{% if page_metadata.keywords %}
+		<meta name="keywords" content="{{page_metadata.keywords}}" />
+	{% endif %}
+    
+	{{ header_output  }}
+</head>

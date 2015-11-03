@@ -1,0 +1,267 @@
+{
+  "layout": {
+    "name": "Default",
+    "description": "",
+    "structure": {
+      "un-document": {
+        "name": "Document",
+        "alias": null,
+        "features": {
+          "structured": {
+            "type": "structured",
+            "options": {
+            }
+          }
+        },
+        "children": [
+          {
+            "un-head": {
+              "name": "Header",
+              "alias": null,
+              "features": {
+                "page_metadata": {
+                  "type": "page_metadata",
+                  "options": {
+                  }
+                },
+                "theme": {
+                  "type": "theme",
+                  "options": {
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "un-code": {
+                    "name": "Code",
+                    "alias": null,
+                    "features": {
+                      "code": {
+                        "type": "code",
+                        "options": {
+                          "code_type": "html",
+                          "code": "    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "un-body": {
+              "name": "HTML Body",
+              "alias": null,
+              "features": {
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "navigation": {
+                    "name": "Navigation",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Navbar_Color": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "navbar-inverse"
+                        }
+                      },
+                      "dropdown-Container_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Navbar_Position": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "navbar-fixed-top"
+                        }
+                      },
+                      "dropdown-Navigation_Links_Float": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "navbar-left"
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "asset-Logo": {
+                        "type": "asset",
+                        "options": {
+                          "asset_id": ""
+                        }
+                      },
+                      "navigation": {
+                        "type": "navigation",
+                        "options": {
+                          "navigation_kind": "203"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "un-pagecontent": {
+                    "name": "Page Content",
+                    "alias": null,
+                    "features": {
+                      "page": {
+                        "type": "page",
+                        "options": {
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "footer": {
+                    "name": "Footer",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Navbar_Color": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "navbar-inverse"
+                        }
+                      },
+                      "dropdown-Container_Width": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Navbar_Position": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "dropdown-Navigation_Links_Float": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "navbar-left"
+                        }
+                      },
+                      "dropdown-Icon_Size": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": ""
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "navigation": {
+                        "type": "navigation",
+                        "options": {
+                          "navigation_kind": "203"
+                        }
+                      },
+                      "simple_string-Facebook_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "#"
+                        }
+                      },
+                      "simple_string-Twitter_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "#"
+                        }
+                      },
+                      "simple_string-Linkedin_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": ""
+                        }
+                      },
+                      "simple_string-Pinterest_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "#"
+                        }
+                      },
+                      "simple_string-Behance_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": ""
+                        }
+                      },
+                      "simple_string-Dribble_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "#"
+                        }
+                      },
+                      "simple_string-Github_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "#"
+                        }
+                      },
+                      "simple_string-Website_URL": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": ""
+                        }
+                      },
+                      "simple_string-Email": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": ""
+                        }
+                      },
+                      "simple_string-Copyright_Text": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "Made on unroole with Bootstrap and FontAwesome"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "google maps api": {
+                    "name": "Google Maps API",
+                    "alias": null,
+                    "features": {
+                      "simple_string-Google_Maps_API_Key": {
+                        "type": "simple_string",
+                        "options": {
+                          "text": "AIzaSyCrs41JMroGHdU7ZoDSKLZ3_sYz0xu4IcI"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

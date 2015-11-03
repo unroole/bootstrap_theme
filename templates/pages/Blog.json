@@ -1,0 +1,403 @@
+{
+  "page": {
+    "title": "Blog",
+    "description": "",
+    "tags": [
+
+    ],
+    "keywords": [
+
+    ],
+    "permanent-link": "blog",
+    "structure": {
+      "un-page": {
+        "name": "Page",
+        "alias": null,
+        "features": {
+          "html_attributes": {
+            "type": "html_attributes",
+            "options": {
+              "tag_id": null,
+              "tag_classes": null,
+              "tag_attributes": null
+            }
+          },
+          "structured": {
+            "type": "structured",
+            "options": {
+            }
+          }
+        },
+        "children": [
+          {
+            "component _ section": {
+              "name": "Component - Section",
+              "alias": null,
+              "features": {
+                "dropdown-Tag": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "section"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container-fluid"
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "component _ column": {
+                    "name": "Component - Column",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Grid_Colums_on_Devices_Above_1200px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-lg-12"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Above_992px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-12"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Above_768px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-sm-12"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Below_768px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-xs-12"
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "structured": {
+                        "type": "structured",
+                        "options": {
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "vertical spacer": {
+                          "name": "Vertical Spacer",
+                          "alias": null,
+                          "features": {
+                            "dropdown-Spacer_Height": {
+                              "type": "dropdown",
+                              "options": {
+                                "options": "50px"
+                              }
+                            },
+                            "dropdown-Show_Horizontal_Rule": {
+                              "type": "dropdown",
+                              "options": {
+                                "options": "false"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "hero section": {
+              "name": "Hero Section",
+              "alias": null,
+              "features": {
+                "dropdown-Button_Color": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "btn-primary"
+                  }
+                },
+                "dropdown-Content_Position": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "text-center"
+                  }
+                },
+                "dropdown-Text_Color": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": ""
+                  }
+                },
+                "simple_string-Link_Override_URL": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": ""
+                  }
+                },
+                "simple_string-Button_Link_Override_URL": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": ""
+                  }
+                },
+                "page_link-Button_Link_To_Page": {
+                  "type": "page_link",
+                  "options": {
+                    "page": ""
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "asset_image-Choose_a_Background_Image": {
+                  "type": "asset_image",
+                  "options": {
+                    "asset_id": ""
+                  }
+                },
+                "simple_string-Title_Caption": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": "Blogocalypse"
+                  }
+                },
+                "simple_string-Body_Caption": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": "This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information."
+                  }
+                },
+                "simple_string-Button_Label": {
+                  "type": "simple_string",
+                  "options": {
+                    "text": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "vertical spacer": {
+                    "name": "Vertical Spacer",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Spacer_Height": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "50px"
+                        }
+                      },
+                      "dropdown-Show_Horizontal_Rule": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "false"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "article collection": {
+              "name": "Article Collection",
+              "alias": null,
+              "features": {
+                "dropdown-Show_Metadata": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "yes"
+                  }
+                },
+                "dropdown-Show_Featured_Image": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "yes"
+                  }
+                },
+                "dropdown-Pagination": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "simple"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container"
+                  }
+                },
+                "simple_number-Truncation_Length_In_Chars": {
+                  "type": "simple_number",
+                  "options": {
+                    "value": null
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "article_collection": {
+                  "type": "article_collection",
+                  "options": {
+                    "categories": [
+
+                    ],
+                    "types": [
+
+                    ],
+                    "per_page": "3",
+                    "results_page_id": "",
+                    "filter_articles_by_tags": ""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "component _ section": {
+              "name": "Component - Section",
+              "alias": null,
+              "features": {
+                "dropdown-Tag": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "section"
+                  }
+                },
+                "dropdown-Width": {
+                  "type": "dropdown",
+                  "options": {
+                    "options": "container-fluid"
+                  }
+                },
+                "html_attributes": {
+                  "type": "html_attributes",
+                  "options": {
+                    "tag_id": "",
+                    "tag_classes": "",
+                    "tag_attributes": ""
+                  }
+                },
+                "structured": {
+                  "type": "structured",
+                  "options": {
+                  }
+                }
+              },
+              "children": [
+                {
+                  "component _ column": {
+                    "name": "Component - Column",
+                    "alias": null,
+                    "features": {
+                      "dropdown-Grid_Colums_on_Devices_Above_1200px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-lg-12"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Above_992px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-md-12"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Above_768px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-sm-12"
+                        }
+                      },
+                      "dropdown-Grid_Colums_on_Devices_Below_768px": {
+                        "type": "dropdown",
+                        "options": {
+                          "options": "col-xs-12"
+                        }
+                      },
+                      "html_attributes": {
+                        "type": "html_attributes",
+                        "options": {
+                          "tag_id": "",
+                          "tag_classes": "",
+                          "tag_attributes": ""
+                        }
+                      },
+                      "structured": {
+                        "type": "structured",
+                        "options": {
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "vertical spacer": {
+                          "name": "Vertical Spacer",
+                          "alias": null,
+                          "features": {
+                            "dropdown-Spacer_Height": {
+                              "type": "dropdown",
+                              "options": {
+                                "options": "50px"
+                              }
+                            },
+                            "dropdown-Show_Horizontal_Rule": {
+                              "type": "dropdown",
+                              "options": {
+                                "options": "false"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

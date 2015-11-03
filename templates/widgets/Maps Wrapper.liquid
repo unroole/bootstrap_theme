@@ -1,0 +1,36 @@
+{% dropdown-Zoom_Level {
+    "1" : "1",
+    "2" : "2",
+    "3" : "3",
+    "4" : "4",
+    "5" : "5",
+    "6" : "6",
+    "7" : "7",
+    "8" : "8",
+    "9" : "9",
+    "10" : "10",
+    "11" : "11",
+    "12" : "12",
+    "13" : "13",
+    "14" : "14",
+    "15" : "15",
+    "16" : "16",
+    "17" : "17",
+    "18" : "18",
+    "19" : "19",
+    "20" : "20"
+} %}
+
+{% dropdown-Disable_Default_Google_Maps_Controls {
+        "Yes" : "true",
+        "No" : "false"
+} %}
+
+{% dropdown-Zoom_on_scroll {
+    "Yes" : "true",
+    "No" : "false"
+} %}
+<div id="multiple-map">
+	{{structured}}
+	<div id="multiple-map-canvas" style="height: 500px; width: 100%" data-zoom="{{dropdown-Zoom_Level}}" data-default-ui="{{dropdown-Disable_Default_Google_Maps_Controls}}" data-scroll-zoom="{{dropdown-Zoom_on_scroll}}"></div><!-- end#map-canvas -->
+</div><!-- end#multiple-map -->

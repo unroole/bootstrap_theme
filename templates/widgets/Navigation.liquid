@@ -1,0 +1,48 @@
+{% dropdown-Navbar_Color {
+    "default" : "navbar-default",
+    "inverted" : "navbar-inverse"
+    } %}
+{% dropdown-Container_Width {
+    "fixed" : "",
+    "fluid" : "-fluid"
+    } %}
+{% dropdown-Navbar_Position {
+    "default" : "",
+    "fixed to top" : "navbar-fixed-top",
+    "fixed to bottom" : "navbar-fixed-bottom"
+    } %}
+{% dropdown-Navigation_Links_Float {
+    "left" : "navbar-left",
+    "right" : "navbar-right"
+    } %}
+<nav class="navbar {{dropdown-Navbar_Color}} {{dropdown-Navbar_Position}} {{html_attributes.classes}}" id="{{html_attributes.id}}" {{html_attributes.attributes}}>
+    <div class="container{{dropdown-Container_Width}}">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#un-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="{{asset-Logo.sizes.xxs.url}}" alt="{{asset-Logo.name}}" class="img-responsive" /></a>
+        </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="un-navigation">
+            <ul class="nav navbar-nav {{dropdown-Navigation_Links_Float}}">
+            {% for level_1 in navigation.items %}
+                <li class="{% if level_1.items != blank %}dropdown{% endif %}"> 
+                    <a href="{{level_1.url}}" {% if level_1.items != blank %} class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" {% endif %}>{{level_1.label}} {% if level_1.items != blank %}<span class="caret"></span>{% endif %}</a>
+                    {% if level_1.items != blank %}
+                        <ul class="dropdown-menu" role="menu">
+                        {% for level_2 in level_1.items %}
+                            <li><a href="{{level_2.url}}">{{level_2.label}}</a></li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

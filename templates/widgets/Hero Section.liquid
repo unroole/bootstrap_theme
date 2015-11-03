@@ -1,0 +1,38 @@
+{% dropdown-Button_Color {
+    "default" : "btn-default",
+    "primary" : "btn-primary",
+    "link" : "btn-link"
+    }
+    %}
+    
+{% dropdown-Content_Position {
+    "Center" : "text-center",
+    "Left" : "text-left",
+    "Right" : "text-right"
+    }
+    %}
+    
+{% dropdown-Text_Color {
+    "Default" : "",
+    "White" : "textcolor-white"
+    }
+    %}
+
+{% if simple_string-Link_Override_URL.content != blank %}
+    {% assign myurl = simple_string-Button_Link_Override_URL %}
+{% else %}
+    {% assign myurl = page_link-Button_Link_To_Page %}
+{% endif %}
+
+<section id="{{html_attributes.id}}" {{html_attributes.attributes}} class="jumbotron image-bg-cover container-fluid {{html_attributes.classes}}" style="background-image: url('{{asset_image-Choose_a_Background_Image.sizes.xxl.url}}');">
+    <div class="container {{dropdown-Content_Position}} {{dropdown-Text_Color}}">
+        {% if simple_string-Title_Caption != "" %}<h1>{{simple_string-Title_Caption}}</h1>{% endif %}
+        {% if simple_string-Body_Caption != "" %}<p>{{simple_string-Body_Caption}}</p>{% endif %}
+        {% if simple_string-Button_Label != "" %}
+            <a href="{{myurl}}" class="btn {{dropdown-Button_Color}} btn-lg">
+                {{simple_string-Button_Label}}
+            </a>
+        {% endif %}
+        {{structured}}
+    </div>
+</section>

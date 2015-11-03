@@ -1,0 +1,65 @@
+{% dropdown-Width {
+    "1/1" : "col-md-12",
+    "1/2" : "col-md-6",
+    "1/3" : "col-md-4",
+    "1/4" : "col-md-3"
+} %}
+{% dropdown-Featured_plan {
+    "regular" : "",
+    "featured" : "bg-primary"
+} %}
+
+{% dropdown-Text_Alignment {
+    "left" : "text-left",
+    "right" : "text-right",
+    "center" : "text-center",
+    "justify" : "text-justify"
+} %}
+
+{% dropdown-Button_Color {
+    "default" : "btn-default",
+    "primary" : "btn-primary",
+    "success" : "btn-success",
+    "info" : "btn-info",
+    "warning" : "btn-warning",
+    "danger" : "btn-danger",
+    "link" : "btn-link"
+    }
+    %}
+{% dropdown-Button_Size {
+    "default" : "",
+    "large" : "btn-lg",
+    "small" : "btn-sm",
+    "extra small" : "btn-xs"
+    } %}
+{% dropdown-Button_Width {
+    "auto" : "",
+    "full" : "btn-block"
+    } %}
+
+{% if simple_string-Link_Override_URL.content != blank %}
+    {% assign myurl = simple_string-Link_Override_URL %}
+{% else %}
+    {% assign myurl = page_link-Link_To_Page %}
+{% endif %}
+
+<div id="{{html_attributes.id}}" class="col-xs-12 {{dropdown-Width}} {{dropdown-Text_Alignment}} {{html_attributes.classes}}" {{html_attributes.attributes}}>
+    <table class="table table-bordered">
+        <tr class="{{dropdown-Featured_plan}}">
+            <td>
+                <h2>{{simple_string-Plan_Name}}</h2>
+                <h1>{{simple_string-Price}}<small {% if dropdown-Featured_plan == "bg-primary" %} class="textcolor-white" {% endif %}> / {{simple_string-Unit}}</small></h1>
+                <a href="{{myurl}}" class="btn {{dropdown-Button_Color}} {{dropdown-Button_Size}} {{dropdown-Button_Width}}" >
+                    {{simple_string-Button_Label}}
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{text-Features}}
+            </td>
+        </tr>
+    </table>
+</div><!-- end.col-xs-12-->
+
+    
