@@ -3,11 +3,138 @@
 
 Bootstrap theme for unroole is a fully functional multipurpose website, with standard pages (homepage, blog, events, contact us, single blog post and event) and a [kitchensink page](http://startingpoint-bootstrap3.unroole.com/kitchen-sink) where all widgets and their various configurations are showcased. Kitchensink page will be very useful when you’re building your own custom pages as you can simply copy and paste particular widgets structure you would like to use and modify.
 
+## Package Content
+```
+bootstrap
+  |- css
+  |   |- Main.css
+  |
+  |- frameworks
+  |   |- bootstrap
+  |   |   |- bootstrap
+  |   |       |- css
+  |   |       |   |- bootstrap.min.css
+  |   |       |   
+  |   |       |- fonts
+  |   |       |   |- glyphicon-halflings-regular.eot
+  |   |       |   |- glyphicon-halflings-regular.svg
+  |   |       |   |- glyphicon-halflings-regular.ttf
+  |   |       |   |- glyphicon-halflings-regular.woff
+  |   |       |   |- glyphicon-halflings-regular.woff2
+  |   |       |    
+  |   |       |- js
+  |   |           |- bootstrap.min.js
+  |   |
+  |   |- Font Awesome 4.4.0
+  |       |- Font Awesome 4.4.0
+  |           |- css
+  |           |   |- font-awesome.css
+  |           |   |- font-awesome.min.css
+  |           |
+  |           |- fonts
+  |                |- fontawesome-webfont.eot
+  |                |- fontawesome-webfont.svg
+  |                |- fontawesome-webfont.ttf
+  |                |- fontawesome-webfont.woff
+  |                |- fontawesome-webfont.woff2
+  |                |- FontAwesome.otf
+  |
+  |- js
+  |  |- jquery.min.js
+  |
+  |- templates
+  |   |- layouts
+  |   |   |- Default.json
+  |   |
+  |   |- pages
+  |   |   |- Blog Result.json
+  |   |   |- Blog.json
+  |   |   |- Contact Us.json
+  |   |   |- Event Result.json
+  |   |   |- Events.json
+  |   |   |- Home.json
+  |   |   |- Kitchen Sink.json
+  |   |   |- Team.json
+  |   |   
+  |   |- widgets
+  |       |- Article Collection.json
+  |       |- Article Collection.liquid
+  |       |- Article Result.json
+  |       |- Article Result.liquid
+  |       |- Article.json
+  |       |- Article.liquid
+  |       |- Biography.json
+  |       |- Biography.liquid
+  |       |- Body.json
+  |       |- Body.liquid
+  |       |- Biography.json
+  |       |- Biography.liquid
+  |       |- Breadcrumbs.json
+  |       |- Breadcrumbs.liquid
+  |       |- Button.json
+  |       |- Button.liquid
+  |       |- Component - Column.json
+  |       |- Component - Column.liquid
+  |       |- Component - Form Field.json
+  |       |- Component - Form Field.liquid
+  |       |- Component - Form Wrapper.json
+  |       |- Component - Form Wrapper.liquid
+  |       |- Component - Map Marker.json
+  |       |- Component - Map Marker.liquid
+  |       |- Component - Map Wrapper.json
+  |       |- Component - Map Wrapper.liquid
+  |       |- Component - Pricing Column.json
+  |       |- Component - Pricing Column.liquid
+  |       |- Component - Section.json
+  |       |- Component - Section.liquid
+  |       |- Component - Services Item.json
+  |       |- Component - Services Item.liquid
+  |       |- Component - Social Media Links.json
+  |       |- Component - Social Media Links.liquid
+  |       |- Event Collection.json
+  |       |- Event Collection.liquid
+  |       |- Event Result.json
+  |       |- Event Result.liquid
+  |       |- Event Result.json
+  |       |- Event single.json
+  |       |- Event single.liquid
+  |       |- Font Awesome Icon (v.4.4.0).json
+  |       |- Font Awesome Icon (v.4.4.0).liquid
+  |       |- Footer.json
+  |       |- Footer.liquid
+  |       |- Gallery.json
+  |       |- Gallery.liquid
+  |       |- Glyphicon.json
+  |       |- Glyphicon.liquid
+  |       |- Google Maps Api.json
+  |       |- Google Maps Api.liquid
+  |       |- Hero Section.json
+  |       |- Hero Section.liquid
+  |       |- HTML Layout Header.json
+  |       |- HTML Layout Header.liquid
+  |       |- HTML Page Header.json
+  |       |- HTML Page Header.liquid
+  |       |- Image.json
+  |       |- Image.liquid
+  |       |- Lead Text.json
+  |       |- Lead Text.liquid
+  |       |- Navigation.json
+  |       |- Navigation.liquid
+  |       |- Quote Section.json
+  |       |- Quote Section.liquid
+  |       |- Slideshow.json
+  |       |- Slideshow.liquid
+  |       |- Vertical Spacer.json
+  |       |- Vertical Spacer.json
+  |
+  |- properties.xml
+
+```
 
 ## Widgets
 Below is the list of all widgets included in the theme and their configuration options
 
-###1. Article collection
+### 1. Article collection
 Displays collection of articles based on the category and/or type. Should be placed on pages that display article collections (ie. blog, news).
 Configuration options:
 - *Width*: width of the container. Correspodns with Bootstraps fluid and fixed containers. 
@@ -42,7 +169,7 @@ Options:
   - _filter articles by tags_: coma-separated list of tags to filter the articles by
 
 ### 2. Article Result
------------------
+
 Displays article from a collection on a single page. Should be placed on a _results page_ that will display single articles when read more links are clicked within the article collection.
 Configuration options:
 - *Width*: width of the container. Correspodns with Bootstraps fluid and fixed containers. 
@@ -78,7 +205,7 @@ Options:
   - _attributes_: custom attributes, ie. `data-foo="bar"`
 
 ### 3. Article
-----------
+
 Selects and displays single article content.
 Configuration options:
 - *Width*: width of the container. Correspodns with Bootstraps fluid and fixed containers. 
@@ -118,7 +245,7 @@ Options:
   - _results page_: page which will be used to display single article when read more link is clicked
 
 ### 4. Biography
-------------
+
 Displays a single biography article. Should be placed inside _Component Section_ widget.
 Configuration options: 
 - *Width*: width of the article section. Corresponds to column numbers in Bootstrap.
@@ -164,7 +291,7 @@ Options:
   - _results page_: will not be rendered
 
 ### 5. Body
--------
+
 Renders the `body` tag and allows you to add custom attributes to it. Should be placed in layouts. This is a structured widget, which means that other widgets can be placed inside.
 Configuration options:
 - *HTML Attributes*: custom attributes that will be aplied to the biography section. 
@@ -174,13 +301,13 @@ Options:
   - _attributes_: custom attributes, ie. `data-foo="bar"`
 
 ### 6. Breadcrumbs
---------------
+
 Displays breadcrumbs based on the selected navigation.
 Configurable options:
 - *Navigation*: name of the navigation to be used for breadcrumb links
 
 ### 7. Button
----------
+
 Displays Bootstrap styled buttons. This is a structured widget, which means that other widgets can be placed inside. Most commonly you would place Font Awesome Icon widget
 Configurable options:
 - *Button Type*: controls which tag should be used to render the button.
@@ -224,7 +351,7 @@ Options:
   - _results page_: will not be rendered
 
 ### 8. Component - Column
----------------------
+
 Renders single Bootstrap column. Should be placed inside the Componend Section widget. This is a structured widget, which means that other widgets can be placed inside.
 Configurable options:
 - *Grid Colums on Devices Above 1200px*: number for `.col-lg-` class
@@ -242,7 +369,7 @@ Options:
   - _results page_: will not be rendered
 
 ### 9. Component Form Field
------------------------
+
 Renders single input field. Should be placed inside Component - Form Wrapper widget.
 Configurable options:
 - *Input Type*: select type of input you would like to create.
@@ -286,7 +413,7 @@ Options:
   - _attributes_: custom attributes, ie. `data-foo="bar"`
 
 ### 10. Component - Form Wrapper
----------------------------
+
 Wrapps several Component - Form Field widgets into one form.
 Configurable options:
 - *Form Orientation*: outputs bootstrap classes for form orientation
@@ -304,7 +431,7 @@ Options:
   - _attributes_: custom attributes, ie. `data-foo="bar"`
 
 ### 11. Component - Map Marker
--------------------------
+
 Renders Google Maps marker on a map. Should be used inside Component - Map Wrapper widget. IMPORTANT NOTICE: in order to load Google Maps API you must add Google Maps API widget inside your layout, to load the API on each page or on a single page to load it only on that page.
 Configurable options:
 - *Location Latitude*: latitude of the location
@@ -313,7 +440,7 @@ Configurable options:
 - *Location Description*: Description of the location that will be displayed in the infowindow body when marker is clicked
 
 ### 12. Component - Map Wrapper
---------------------------
+
 Renders a Google map and markers that are placed inside the widget. IMPORTANT NOTICE: in order to load Google Maps API you must add Google Maps API widget inside your layout, to load the API on each page or on a single page to load it only on that page.
 Configurable options:
 - *Zoom level*: zoom level of the map. Correspods with the Google Maps API values
@@ -327,7 +454,7 @@ Options:
   - _no_
 
 ### 13. Component - Pricing Column
------------------------------
+
 Displays a single column of the Pricing table. Should be placed inside Component - Section widget.
 Configurable options:
 - *Width*: width of the article section. Corresponds to column numbers in Bootstrap.
@@ -378,7 +505,7 @@ Options:
 - *Features*: list of features of the plan. Will be rendred in the column body
 
 ### 14. Component - Section
-----------------------
+
 Renders a wrapping element that has `.container` and `.row` elements. This is a structured widget which means that other widgets can be placed inside. Usually these will be Component - Column widgets.
 Configurable options:
 - *Tag*: html tag that will be rendered.
@@ -397,7 +524,7 @@ Options:
   - _attributes_: custom attributes, ie. `data-foo="bar"`
 
 ### 15. Component - Services Item
-----------------------------
+
 Services Item widget is designed to showcase blocks of content with an icon on top. 
 Configurable options:
 - *Width*: width of the Services Item section. Corresponds to column numbers in Bootstrap.
@@ -467,7 +594,7 @@ Options:
 - *Article*: select article to display based on title
 
 ### 16. Component - Social Media Links
----------------------------------
+
 Displays row of social media links and corresponding icons
 Configurable options:
 - *Icon size*: size of the social media icons. These are based on FontAwesome sizes
@@ -489,7 +616,7 @@ Options:
 - *Email*: renders the email portion of the href atribute behind the corresponding FontAwesome icon. Icon and link will not be rendered if the field is empty
 
 ### 17. Event collection
----------------------
+
 Displays collection of events based on the category and/or location. Should be placed on pages that display events collections.
 Configuration options:
 - *Width*: width of the container. Correspodns with Bootstraps fluid and fixed containers. 
@@ -523,7 +650,7 @@ Options:
   - _results page_: page which will be used to display single article when read more link is clicked
 
 ### 18. Event Result
------------------
+
 Displays event from a collection on a single page. Should be placed on a _results page_ that will display single events when read more links are clicked within the event collection. Besides the event content this widget also renders Google Map with marker placed at the location of the event. When clicked, marker will display infowindow with locations name and description. IMPORTANT NOTICE: in order to load Google Maps API you must add Google Maps API widget inside your layout, to load the API on each page or on a single page to load it only on that page.
 Configuration options:
 - *Width*: width of the container. Correspodns with Bootstraps fluid and fixed containers. 
@@ -569,7 +696,7 @@ Options:
   - _no_
 
 ### 19. Event
---------
+
 Selects and displays a single event content and renders the Google Map with marker pointing to events location. IMPORTANT NOTICE: in order to load Google Maps API you must add Google Maps API widget inside your layout, to load the API on each page or on a single page to load it only on that page.
 Configuration options:
 - *Width*: width of the container. Correspodns with Bootstraps fluid and fixed containers. 
@@ -615,13 +742,13 @@ Options:
   - _no_
 
 ### 20. FontAwesome Icon
--------------------
+
 Displays single FontAwesome icon.
 Configurable options:
 - *Icon*: select the icon by name
 
 ### 21. Footer
----------
+
 Displays footer bar with navigation and social media links.
 Configurable options:
 - *Navbar Color*: Bootstraps default navigation color variations
@@ -660,7 +787,7 @@ Options:
 - *Copyright Text*: text that will be rendered as a copyright text
 
 ### 22. Gallery
-----------
+
 Displays unroole galleries.
 Configurable options:
 - *Container width*: width of the container. Correspodns with Bootstraps fluid and fixed containers. 
@@ -677,20 +804,20 @@ Options:
 - *Grid Colums on Devices Below 768px: number for `.col-xs-` class that will be applied to each image in the gallery
 - *Gallery: select which unroole galery to display by gallery title
 
-### 0. Glyphicon
-------------
+### 23. Glyphicon
+
 Displays single Glyphicon icon
 Configurable options:
 - *Icon Name*: select the icon by name
 
-### 23. Google Maps API
-------------------
+### 24. Google Maps API
+
 Loads Google Maps API. Should be placed in Layout, to load the API on each page or on a single page to load it only on that page.
 Configurable options:
 - *Google Maps API Key*: your Google Maps API key
 
-### 24. Hero Section
----------------
+### 25. Hero Section
+
 Displays Bootstraps Jumpotron with additional elements. This is a structured widget which means that other widgets can be placed inside and they will be rendered below the button
 Configurable options:
 - *Choose a Background Image*: select an image already uploaded to unroole assets as a background of the Hero Section
@@ -719,16 +846,16 @@ Options:
   - _classes_: classes of the section 
   - _attributes_: custom attributes, ie. `data-foo="bar"`
 
-### 25. HTML Layout Header
----------------------
+### 26. HTML Layout Header
+
 Renders `<head>` portion of the page. This widget will output page meta description, title and keywords in appropriate meta tags. Also it will output the code that is placed in HTML Page Header widget. This widget doesn't accept any configurations.
 
-### 26. HTML Page Header 
--------------------
+### 27. HTML Page Header 
+
 Used to output custom code to the `<head>` tag of the page it was used in. This is a structured widget which means that it accepts child widgets. Usually you would place Code system widget with the code you would like to be appended to the `<head>` tag of that page.
 
-### 27. Image
---------
+### 28. Image
+
 Dsiplays single image uploaded to assets
 Configurable options:
 - *Image Shape*: controls display shape of featured image
@@ -741,8 +868,7 @@ Options:
   - _yes_
   - _no_
 
-### 28. Lead Text
-------------
+### 29. Lead Text
 Displays text as Bootstraps lead paragrpah.
 Configurable options:
 - *Text Alignment*: sets the alignemnt of all the text
@@ -752,3 +878,71 @@ Options:
   - _center_
   - _justify_
 - *Lead text*: text to output
+
+### 30. Navigation
+Displays one of the existing navigation as Bootstraps responsive navigation.
+Configurable options:
+- *Container width*: width of the container. Correspodns with Bootstraps fluid and fixed containers. 
+Options:
+  - _fluid_: will output `.container-fluid` class
+  - _fixed_: will output `.container` class
+- *Navbar Color*: Bootstraps default navigation color variations
+Options:
+  - _default_: renders `.navbar-default` class
+  - _inverse_: renders `.navbar-inverse` class
+- *Navbar Position*: position of the navigation
+  - _default_: no class will be applied
+  - _fixed to top_: navigation will be fixed to top. Renders `.navbar-fixed-top` class
+  - _fixed to bottom_ : navigation will be fixed to bottom. Renders `.navbar-fixed-bottom` class
+- *Navigation Links Float*: float of the navigation links
+Options:
+  - _left_: links will float left. Renders `.navbar-left` class
+  - _right_: links will float right. Renders `.navbar-right` class
+- *Logo*: choose an image uploaded to assets by image title or tag
+
+### 31. Quote Section
+Displays quote and author in a quote style. This is a structured widget, which means that other widgets can be placed inside. Their content will be rendered below the author name.
+Configurable options:
+- *Content Position*: alignment of the content. Sets the alignemnt of all the text.
+Options:
+  - _left_
+  - _right_
+  - _center_
+  - _justify_
+- *Show Quotation Marks*: controls display of quotation marks. Options:
+  - _Yes_
+  - _No_
+- *Quote Caption*: text that will be outputted body of the quote
+- *Author*: text that will be outputted as author of the quote
+
+### 32. Slideshow
+Displays unroole gallery as Bootstrap Carousel. Configurable options:
+- *Width*: width of the container. Correspodns with Bootstraps fluid and fixed containers. 
+Options: 
+  - _fluid_: will output `.container-fluid` class
+  - _fixed_: will output `.container` class
+- *Display Caption*: controlls display of the caption for each image
+Options:
+  - _yes_
+  - _no_
+- *Loop*: Options:
+  - _yes_
+  - _no_
+- *Keyboard*: allow keyboard controll of the carousel. Options:
+  - _yes_
+  - _no_
+- *HTML Identification*: unique ID of the carousel
+
+### 33. Vertical Spacer
+Adds empty vertical space. Configurable options:
+- *Spacer Height*: height in px. Options:
+  - _10px_
+  - _20px_
+  - _30px_
+  - _40px_
+  - _50px_
+  - _100px_
+  - _200px_
+- *Show Horizontal Rule*: controlls display of horizontal line
+  - _yes_
+  - _no_
